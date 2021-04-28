@@ -34,7 +34,6 @@ def posts_list(request):
             for comment in post_object.comment_set.all():
                 data['comments'].append({'date': comment.date, 'text': comment.text, 'id': comment.id})
         return Response(serializer.data)
-        # 'safe=False' for objects serialization
  
     elif request.method == 'POST':
         post_data = JSONParser().parse(request)
