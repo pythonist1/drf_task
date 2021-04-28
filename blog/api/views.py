@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http.response import JsonResponse
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from rest_framework import viewsets
