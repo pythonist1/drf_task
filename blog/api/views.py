@@ -45,7 +45,7 @@ def posts_list(request):
     
     elif request.method == 'DELETE':
         count = Post.objects.all().delete()
-        return Response({'message': '{} Tutorials were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+        return Response({'message': '{} Posts were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
  
  
 @api_view(['GET', 'PUT', 'DELETE'])
