@@ -50,7 +50,7 @@ def posts_list(request):
  
  
 @api_view(['GET', 'PUT', 'DELETE'])
-# @permission_classes((IsAuthenticated,))
+@permission_classes((IsAuthenticated,))
 def posts_detail(request, pk):
     try: 
         post = Post.objects.get(pk=pk) 
@@ -79,7 +79,7 @@ def posts_detail(request, pk):
 
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
-# @permission_classes((IsAuthenticated,))
+@permission_classes((IsAuthenticated,))
 def comment_detail(request, pk=None):
     try: 
         comment = Comment.objects.get(pk=pk) 
