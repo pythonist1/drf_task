@@ -6,7 +6,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'posts', views.PostViewSet)
-router.register(r'comment', views.PostViewSet)
+# router.register(r'comment', views.PostViewSet)
 
 urlpatterns = [
     url(r'^api/posts/(?P<pk>[0-9]+)$', views.posts_detail),
